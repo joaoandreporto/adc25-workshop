@@ -1,3 +1,4 @@
+# JUCE setup
 sudo apt -y update
 sudo apt -y install libasound2-dev libjack-jackd2-dev \
     ladspa-sdk \
@@ -7,7 +8,10 @@ sudo apt -y install libasound2-dev libjack-jackd2-dev \
     libwebkit2gtk-4.1-dev \
     libglu1-mesa-dev mesa-common-dev
 
+# Python setup
 sudo apt -y install python3.12-venv
+
 python3 -m venv venv
 source venv/bin/activate
 pip install .
+
