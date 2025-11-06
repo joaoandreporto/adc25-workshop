@@ -12,7 +12,7 @@ The easiest way to get started is to use GitHub Codespaces.
 
 Pros: No need to install anything to your computer, everything runs in the cloud.
 
-Cons: Compilation may be slower. You will use a Linux environment.
+Cons: Compilation may be slower. You will use a Linux environment. You won't be able to run the plugin, only end-2-end tests.
 
 1. Fork the repo.
 1. On your fork, click "Code -> Codespaces -> Create a codespace on "main""
