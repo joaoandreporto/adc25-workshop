@@ -104,6 +104,8 @@ cmake --preset default
 cmake --build --preset default
 ```
 
+The repository works well with the CLion IDE.
+
 C++ code in this repository is based on my [`audio-plugin-template` repository](https://github.com/JanWilczek/audio-plugin-template).
 
 ##### Mac users
