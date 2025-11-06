@@ -1,8 +1,8 @@
 # DSP in Practice Workshop Repository
 
-Workshop hosted at the Audio Developer Conference 2024 in Bristol.
+Workshop hosted at the Audio Developer Conference 2025 in Bristol.
 
-[Slides](docs/ADC24_Workshop_Slides_DSP_In_Practice.pdf)
+[Slides](docs/ADC25_Workshop_Slides_DSP_In_Practice.pdf)
 
 ## 🚀 Getting started
 
