@@ -15,6 +15,8 @@ test_output/
 .DS_Store
 todo.md
 done.md
+local-build/
+cmake-build-debug/
 
 # Prerequisites
 *.d
