@@ -4,11 +4,27 @@ Workshop hosted at the Audio Developer Conference 2024 in Bristol.
 
 [Slides](docs/ADC24_Workshop_Slides_DSP_In_Practice.pdf)
 
-## Getting started
+## 🚀 Getting started
+
+### GitHub Codespaces
+
+The easiest way to get started is to use GitHub Codespaces.
+
+Pros: No need to install anything to your computer, everything runs in the cloud.
+
+Cons: Compilation may be slower. You will use a Linux environment.
+
+1. Fork the repo.
+1. On your fork, click "Code -> Codespaces -> Create a codespace on "main""
+1. Wait until the container builds
+
+And that's it!
+
+### Local setup
 
 Follow these instructions **before** attending the workshop. There is high risk that because of low WiFi bandwidth at the conference venue, it will take too long or be impossible to set it up on the spot.
 
-### General prerequisites
+#### General prerequisites
 
 You need to have `git` installed and in your PATH. Here are the commands that we will use in this workshop:
 
@@ -39,7 +55,7 @@ git diff main
 
 In Visual Studio Code, there's a wonderful GitLens plugin that allows you to visually compare against the `main` branch via "GitLens: Compare Working Tree with..." command.
 
-### Python environment setup
+#### Python environment setup
 
 For this workshop, you need to have Python 3 installed and in your PATH. Code was tested with Python 3.11 and 3.12.
 
@@ -70,7 +86,7 @@ You also should be able to run the audio processing script:
 python py/main.py data/saw200.0Hz5.0s.wav
 ```
 
-### C++ setup
+#### C++ setup
 
 This workshop requires the following tools installed on your machine and available in your PATH:
 
@@ -90,11 +106,11 @@ cmake --build --preset default
 
 C++ code in this repository is based on my [`audio-plugin-template` repository](https://github.com/JanWilczek/audio-plugin-template).
 
-#### Mac users
+##### Mac users
 
 The repostitory works with Xcode 16. Older versions of Xcode may be problematic.
 
-#### Windows users
+##### Windows users
 
 On Windows, to have the compiler on your PATH, you need to run a batch script. Assuming, you have Visual Studio 2022 installed, you can run the following command to initialize C++ environment in your shell.
 
@@ -102,7 +118,7 @@ On Windows, to have the compiler on your PATH, you need to run a batch script. A
 "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\Build\vcvars64.bat"
 ```
 
-#### Linux users
+##### Linux users
 
 To create a Python virtual environment, I needed to install `python3.12-venv` package with
 
