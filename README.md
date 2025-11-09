@@ -21,7 +21,7 @@ Workshop hosted at the Audio Developer Conference 2025 in Bristol.
            3. [3.3. Linux users](#33-linux-users)
         4.  [4. Downloading dependencies](#4-downloading-dependencies)
 2. [📝 Workshop tasks](#-workshop-tasks)
-    1. [Task 1 (`task1` branch): Design](#task-1-task1-branch-design)
+    1. [Task 1 (`task1a` branch): Design](#task-1-task1a-branch-design)
     2. [Task 2 (`task2` branch): Prototype](#task-2-task2-branch-prototype)
     3. [Task 3 (`task3` branch): Implementation part 1](#task-3-task3-branch-implementation-part-1)
     4. [Task 4 (`task4` branch): Implementation part 2](#task-4-task4-branch-implementation-part-2)
@@ -189,12 +189,12 @@ C++ code in this repository is based on my [`audio-plugin-template` repository](
 
 This workshop consists of several tasks in a logical progression. The goal is to build a working flanger plugin in C++ using the JUCE C++ framework.
 
-You should start each task by checking out the appropriate branch (`task1`, `task2`, etc.).
+You should start each task by checking out the appropriate branch (`task1a`, `task2`, etc.).
 
-### Task 1 (`task1` branch): Design
+### Task 1 (`task1a` branch): Design
 
 ```bash
-git checkout task1
+git checkout task1a
 ```
 
 Given this DSP block diagram of a flanger plugin,
