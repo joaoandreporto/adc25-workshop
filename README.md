@@ -94,7 +94,7 @@ This workshop requires the following tools installed on your machine and availab
 - CMake 3.22 or newer,
 - a build system like ninja (recommended), MSBuild (bundled with Visual Studio), xcode-build (bundled with Xcode), or make (UNIX Makefiles)
 
-Once this is in place, you can run classic CMake commands:
+Once this is in place, run these CMake commands:
 
 ```bash
 # Downloads C++ dependencies and generates the project for ninja (check CMakePresets.json for other generators)
