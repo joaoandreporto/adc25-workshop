@@ -122,7 +122,7 @@ sudo apt install python3.12-venv
 
 This workshop requires the following tools installed on your machine and available in your PATH:
 
-- [CMake 3.22 or newer](https://cmake.org/download),
+- [CMake 3.25 or newer](https://cmake.org/download),
 - a **working C++ compiler** that supports C++ 20 (see platform-specific instructions below), and
 - a build system like [ninja](https://ninja-build.org/) (recommended), MSBuild (bundled with Visual Studio), xcode-build (bundled with Xcode), or make (UNIX Makefiles) (see platform-specific instructions below)
 
