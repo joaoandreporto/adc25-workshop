@@ -16,7 +16,7 @@ class DelayLine:
     reading delayed audio samples.
 
     Attributes:
-        wrap_mask (int): Mask used for wrapping buffer indices, set to size - 1.
+        wrap_mask (int): Mask used for wrapping buffer indices, set to size -1.
         buffer (numpy.ndarray): A buffer array to hold the delayed samples.
         write_pointer (int): The current index for writing in the buffer.
     """
@@ -79,8 +79,8 @@ class DelayLine:
 
 class FractionalDelayLine(DelayLine):
     """
-    Extends DelayLine to support fractional sample delay by interpolating between
-    two samples, providing non-integer delays.
+    Extends DelayLine to support fractional sample delay by interpolating
+    between two samples, providing non-integer delays.
     """
 
     def __init__(self, size: int):

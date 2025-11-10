@@ -7,7 +7,11 @@ from dspyplot.stft import plot_spectrogram_and_save
 
 def argument_parser():
     parser = argparse.ArgumentParser()
-    parser.add_argument("filepath", help="path to the file to process with flanger")
+    parser.add_argument(
+        "filepath",
+        help="path to the file to process with flanger"
+    )
+
     return parser
 
 
