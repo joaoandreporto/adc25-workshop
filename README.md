@@ -2,6 +2,8 @@
 
 Workshop hosted at the Audio Developer Conference 2025 in Bristol.
 
+[Slides](docs/ADC25_Workshop_Slides_DSP_In_Practice.pdf)
+
 ## Table of Contents
 
 1. [🚀 Getting started](#-getting-started)
@@ -18,6 +20,7 @@ Workshop hosted at the Audio Developer Conference 2025 in Bristol.
               1. [3.2.1. If you want to use CMake from the command line](#321-if-you-want-to-use-cmake-from-the-command-line)
            3. [3.3. Linux users](#33-linux-users)
         4.  [4. Downloading dependencies](#4-downloading-dependencies)
+        5.  [5. Digital Audio Workstation](#5-digital-audio-workstation)
 2. [📝 Workshop tasks](#-workshop-tasks)
     1. [Task 1 (`task1a` branch): Design](#task-1-task1a-branch-design)
     2. [Task 2 (`task2a` branch): Prototype](#task-2-task2a-branch-prototype)
@@ -37,7 +40,10 @@ Pros: No need to install anything to your computer, everything runs in the cloud
 
 Cons: Compilation may be slower. You will use a Linux environment. You won't be able to run the plugin, only end-2-end tests.
 
-1. Fork the repo.
+1. Fork the repo with all branches (untick "Copy the `main` branch only").
+
+   <img alt="forking the repo" src="docs/img/forking.png" width="500px"/>
+
 1. On your fork, click "Code -> Codespaces -> Create a codespace on "main""
 1. Wait until the container builds
 
@@ -110,7 +116,7 @@ You also should be able to run the audio processing script:
 
 
 ```bash
-python py/main.py data/saw200.0Hz5.0s.wav
+python py/main.py data/guitar_5th.wav
 ```
 
 ##### 2.1. Linux users
@@ -183,6 +189,10 @@ The repository works well with the CLion IDE.
 
 C++ code in this repository is based on my [`audio-plugin-template` repository](https://github.com/JanWilczek/audio-plugin-template).
 
+#### 5. Digtial Audio Workstation
+
+To run the workshop plugin, you need a digital audio workstation (DAW). I recommend [Reaper](https://www.reaper.fm/) or [Audacity](https://www.audacityteam.org/).
+
 ## 📝 Workshop tasks
 
 This workshop consists of several tasks in a logical progression. The goal is to build a working flanger plugin in C++ using the JUCE C++ framework.
@@ -228,7 +238,7 @@ These equations are the basis of the prototype.
 git checkout task2a
 ```
 
-- [ ] Run `python py/main.py data/saw200.0Hz5.0s.wav` and check that audibly the output signal is the same as the input signal
+- [ ] Run `python py/main.py data/guitar_5th.wav` and check that audibly the output signal is the same as the input signal
     - That's because the flanger returns the input sample in the `process_sample()` function.
 - [ ] Inspect the spectrograms generated in the _output_ folder. Are they identical visually?
 - [ ] Properly initialize the `Flanger` class instance
@@ -242,7 +252,7 @@ git checkout task2a
     - [ ] Calculate the output sample $y[n]$ (use a fixed delay instead of a modulated delay for now)
     - [ ] "Update the buffers": write $x_h[n]$ into the delay line
     - [ ] Return the output sample from the function
-    - [ ] Run `python py/main.py data/saw200.0Hz5.0s.wav` and check if you hear a spectral coloration of the input.
+    - [ ] Run `python py/main.py data/guitar_5th.wav` and check if you hear a spectral coloration of the input.
     - [ ] Inspect the spectrograms generated in the _output_ folder. How is the spectrogram of the output different from the spectrogram of the input? Was it expected?
 - [ ] Add an LFO
     - [ ] Instantiate an `LFO` instance in the `Flanger` constructor
@@ -250,7 +260,7 @@ git checkout task2a
     - [ ] In `process_sample()`, `get_next_value()` of the LFO and transform it to unipolar [0, 1] range
     - [ ] Calculate the delay value of the modulated tap for the current sample
     - [ ] Replace the previously fixed delay value in output sample computation with the LFO-modulated one
-    - [ ] Run `python py/main.py data/saw200.0Hz5.0s.wav` and check if you hear the influence of the LFO (the signal slowly changes its timbre)
+    - [ ] Run `python py/main.py data/guitar_5th.wav` and check if you hear the influence of the LFO (the signal slowly changes its timbre)
     - [ ] Inspect the spectrograms generated in the _output_ folder. How is the spectrogram of the output different from the "fixed modulated delay" version? Was it expected?
 
 ### Task 3 (`task3a` branch): Implementation part 1
